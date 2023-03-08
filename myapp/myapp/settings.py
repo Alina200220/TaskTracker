@@ -55,6 +55,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_HEADERS = [
   'Access-Control-Allow-Headers',
   'accept',
+
   'accept-encoding',
   'authorization',
   'content-type',
