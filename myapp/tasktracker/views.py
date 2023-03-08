@@ -11,11 +11,20 @@ class ToDoList(generics.ListAPIView):
     queryset = ToDo.objects.all()
 
 
+
+
 class ToDoCreate(generics.CreateAPIView):
+    permission_classes = [IsAuthenticated]
     serializer_class = ToDoSerializers
 
 
 class ToDoDetail(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = ToDoSerializers
+    queryset = ToDo.objects.all()
+
+class ToDoUpdate(generics.UpdateAPIView):
+    permission_classes = [IsAuthenticated]
     serializer_class = ToDoSerializers
     queryset = ToDo.objects.all()
 
